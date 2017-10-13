@@ -13,10 +13,10 @@ new WebpackDevServer(
         headers: { 'Access-Control-Allow-Origin': '*' }
     }
 ).listen(
-    8081,
+    80,
     '0.0.0.0',
     function (err, result) {
         if (err) { console.log(err); }
-        console.log('Listening at 0.0.0.0:8081');
+        console.log('Listening at 0.0.0.0:80');
     }
 );

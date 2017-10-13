@@ -9,7 +9,7 @@ class LangRedirect extends React.Component {
 		const slug = this.props.match.params.slug;
 
 		this.props.setLocale(lang);
-		this.props.history.push(`/projects/${slug}`);
+		this.props.history.push(`/${slug}`);
 	}
 
 	render() {
@@ -21,7 +21,7 @@ class LangRedirect extends React.Component {
 					<div className="row w3-padding-xlarge">
 						<div className="col-xs-12 text-center">
 							<p><Translate className="name" value="redirect.title" /></p>
-							<Link to={`/projects/${slug}`}>
+							<Link to={`/${slug}`}>
 								<Translate className="name" value="redirect.button" />
 							</Link>
 						</div>

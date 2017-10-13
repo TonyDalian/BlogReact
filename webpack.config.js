@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var config = {
     entry: [
-        'webpack-dev-server/client?http://127.0.0.1:8081',
+        'webpack-dev-server/client?http://127.0.0.1:80',
         'webpack/hot/only-dev-server',
         './src/app.js',
         './style/style.scss'
@@ -13,7 +13,7 @@ var config = {
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: 'http://127.0.0.1:8081/static/'
+        publicPath: 'http://127.0.0.1:80/'
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
@@ -54,6 +54,9 @@ var config = {
                 ]
             }
         ]
+    },
+    devServer: {
+        historyApiFallback: true,
     }
 };
 module.exports = config;

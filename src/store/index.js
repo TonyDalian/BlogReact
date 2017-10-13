@@ -6,6 +6,12 @@ import thunk from 'redux-thunk';
 import { translationsObject } from '../translations';
 import rootReducer from '../reducers';
 
+import { technologies } from '../../data/technologies'; 
+import { categories } from '../../data/categories';
+import { projects } from '../../data/projects';
+
+import { getProjects, getCategories } from '../action';
+
 export function configureStore(initialState) {
   const finalCreateStore = compose(
     applyMiddleware(thunk, reduxImmutableStateInvariant()),
@@ -22,6 +28,9 @@ export function configureStore(initialState) {
   syncTranslationWithStore(store);
   store.dispatch(loadTranslations(translationsObject));
   store.dispatch(setLocale('en'));
+
+  store.dispatch(getCategories(categories));
+  store.dispatch(getProjects(projects));
 
   return store;
 }

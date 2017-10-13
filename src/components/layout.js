@@ -5,7 +5,8 @@ import _ from 'lodash';
 
 import { getProjects, getCategories } from '../action';
 
-import LangRedirect from './redirect';
+import ProjectRedirect from './redirect/project_redirect';
+import SlugRedirect from './redirect/slug_redirect';
 
 import Home from './pages/home';
 import Menu from './layout/menu';
@@ -84,7 +85,8 @@ class Layout extends React.Component {
 						<Route path="/portfolio" component={Portfolio} />  
 						<Route path="/resume" component={Resume} />  
 						<Route path="/contact" component={Contact} />
-						<Route path="/:lang/project/:slug" component={LangRedirect} />
+						<Route path="/:lang/project/:slug" component={ProjectRedirect} />
+						<Route path="/:lang/:slug" component={SlugRedirect} />} />
 						<Redirect to="/home" />  
 					</Switch>
 					<Footer />

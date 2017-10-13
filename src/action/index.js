@@ -9,27 +9,21 @@ import { FETCH_PROJECTS,
 	LOAD_PROJECT,
 	CLEAR_PROJECT } from './types';
 
-export function getProjects() {
+export function getProjects(projects) {
 	return dispatch => {
-		axios
-			.get(`${window.location.origin}/api/projects`)
-			.then(response => dispatch({
-				type: FETCH_PROJECTS,
-				payload: response.data
-			}))
-		;
+		dispatch({
+			type: FETCH_PROJECTS,
+			payload: projects
+		});
 	};
 }
 
-export function getCategories() {
+export function getCategories(categories) {
 	return dispatch => {
-		axios
-			.get(`${window.location.origin}/api/categories`)
-			.then(response => dispatch({
-				type: FETCH_CATEGORIES,
-				payload: response.data
-			}))
-		;
+		dispatch({
+			type: FETCH_CATEGORIES,
+			payload: categories
+		});
 	};
 }
 
@@ -88,7 +82,8 @@ export function loadProject(slug, locale, history) {
 				type: LOAD_PROJECT,
 				payload: response.data
 			}), 
-				error => history.push('/')
+				//error => history.push('/home')
+				console.log("lol")
 			)
 		;
 	};
