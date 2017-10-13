@@ -1,0 +1,148 @@
+.header {
+    height: 200px;
+    z-index: 100;
+    p {
+        color: white;
+    }
+    .header-middle {
+        position: relative;
+        margin-top: 12.5px;
+        height: 150px;
+        img {
+            &.img-circle {
+                position: absolute;
+                top: 5px;
+                left: 30px;
+                width: 180px;
+                height: 180px;
+            }
+            &.me {
+                top: 15px;
+                left: 40px;
+                width: 160px;
+                height: 160px;
+            }
+        }
+        .title {
+            position: relative;
+        }
+        .infos {
+            position: absolute;
+            top: 0;
+            left: 220px;
+        }
+        .name {
+            font-size: 3em;
+        }
+        .caption {
+            text-transform: uppercase;
+            font-size: 1.5em;
+        }
+        .flag {
+            position: absolute;
+            right: 20px;
+            top: 37.5px;
+        }
+        .home {
+            position: absolute;
+            right: 75px;
+            top: 25px;
+            img {
+                height: 50px;
+                width: auto;
+            }
+        }
+    }
+    button {
+      background: none;
+      border: none;
+    }
+}
+
+@media screen and (max-width: 1131px) {
+    .header {
+        height: 175px;
+        .header-middle {
+            padding-top: 20px;
+            img {
+                &.img-circle {
+                    top: 25px;
+                    left: 10px;
+                    width: 140px;
+                    height: 140px;
+                }
+                &.me {
+                    top: 35px;
+                    left: 20px;
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+            .infos {
+                left: 150px;
+            }
+            .name {
+                font-size: 2.2em;
+            }
+            .caption {
+                font-size: 1.2em;
+            }
+            .flag {
+                right: 20px;
+            }
+            .home {
+                right: 75px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .header {
+        height: 300px;
+        .header-middle img {
+            &.img-circle {
+                display: none;
+            }
+            &.me {
+                position: static;
+                display: block;
+                width: 150px;
+                height: 150px;
+                margin: 0 auto;
+            }
+        }
+        .title {
+            display: block;
+            position: static;
+        }
+        .header-middle {
+            .infos {
+                position: static;
+                text-align: center;
+                margin: 0 -15px;
+                left: 0;
+            }
+            .name {
+                font-size: 2em;
+            }
+            .caption {
+                font-size: 1em;
+            }
+            .flag {
+                right: 20px;
+                top: -35px;
+            }
+            .home {
+                left: 20px;
+                top: -35px;
+                height: 25px;
+                width: 25px;
+                img {
+                    height: 25px;
+                    width: auto;
+                }
+            }
+        }
+    }
+}

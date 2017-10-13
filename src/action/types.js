@@ -1,0 +1,9 @@
+export const FETCH_PROJECTS = '@@PLLBlog/FETCH_PROJECTS';
+export const FETCH_CATEGORIES = '@@PLLBlog/FETCH_CATEGORIES';
+export const FETCH_RESUME = '@@PLLBlog/FETCH_RESUME';
+export const FETCH_ACADEMICS = '@@PLLBlog/FETCH_ACADEMICS';
+export const FETCH_EXPERIENCES = '@@PLLBlog/FETCH_EXPERIENCES';
+export const CHANGE_TITLE = '@@PLLBlog/CHANGE_TITLE';
+export const LOAD_PROJECT = '@@PLLBlog/LOAD_PROJECT';
+export const CLEAR_PROJECT = '@@PLLBlog/CLEAR_PROJECT';
+export const FORM_SEND = '@@PLLBlog/FORM_SEND';
