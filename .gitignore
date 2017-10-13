@@ -9,3 +9,6 @@
 
 # prod css and js files
 /dist/
+
+#images
+/bundles/
