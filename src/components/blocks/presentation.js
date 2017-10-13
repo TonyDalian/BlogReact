@@ -28,7 +28,7 @@ class Presentation extends Component {
 
 				<div 
 					className="row me w3-padding-xlarge" 
-					style={{ backgroundImage: 'url("/img/background/ruller.svg")' }}
+					style={{ backgroundImage: 'url("/bundles/pllcore/images/background/ruller.svg")' }}
 				>
 					<div className="col-xs-12 col-md-5 col-lg-4" style={{ paddingBottom: `${10}px` }}>
 						<h2><Translate value="home.intro.legends.1" /></h2>
