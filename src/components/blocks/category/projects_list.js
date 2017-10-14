@@ -17,8 +17,6 @@ class ProjectsList extends Component {
 			)
 		);
 
-		console.log(this.props.projects);
-
 		return (
 			<div>
 				<CategoryTitle category={category} />

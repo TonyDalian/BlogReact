@@ -5,7 +5,6 @@ import { reducer as formReducer } from 'redux-form';
 import ReducerName from './reducer_name';
 import ReducerTitle from './reducer_title';
 import ReducerResume from './reducer_resume';
-import ReducerProject from './reducer_project';
 import ReducerProjects from './reducer_projects';
 import ReducerAcademics from './reducer_academics';
 import ReducerCategories from './reducer_categories';
@@ -16,7 +15,6 @@ const rootReducer = combineReducers({
 	categories: ReducerCategories,
 	academics: ReducerAcademics,
 	projects: ReducerProjects,
-	project: ReducerProject,
 	resume: ReducerResume,
 	title: ReducerTitle,
 	name: ReducerName,

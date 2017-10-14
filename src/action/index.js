@@ -72,32 +72,6 @@ export function changeTitle(title) {
 	};
 }
 
-export function loadProject(slug, locale) {
-	return dispatch => {
-		axios
-			.get(`${window.location.origin}/api/project/${slug}/${locale}`)
-			.then(response => dispatch({
-				slug,
-				locale,
-				type: LOAD_PROJECT,
-				payload: response.data
-			}), 
-				//error => history.push('/home')
-				console.log("lol")
-			)
-		;
-	};
-}
-
-export function clearProject() {
-	return dispatch => {
-		dispatch({
-			type: CLEAR_PROJECT,
-			payload: ''
-		});
-	};
-}
-
 export function formSend(data, callback) {
 	return dispatch => {
 		axios
