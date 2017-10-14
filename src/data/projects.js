@@ -165,7 +165,7 @@ export const projects = [
     music: true,
     dev: false,
     menu: false,
-    portfolio: true,
+    portfolio: false,
     homepage: false,
     categories: [
       33,

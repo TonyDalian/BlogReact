@@ -1,3 +1,12 @@
+import { fr as MetallicaEnterSandmanCover } from './projects/metallica-enter-sandman-cover';
+import { fr as IronMaidenAcesHighCover } from './projects/iron-maiden-aces-high-cover';
+import { fr as RaidTeamGenerator } from './projects/raid-team-generator';
+import { fr as PersonalWebsite } from './projects/personal-website';
+import { fr as VolumeManager } from './projects/volume-manager';
+import { fr as Intellifridge } from './projects/intellifridge';
+import { fr as DansLe1000 } from './projects/dans-le-1000';
+import { fr as Ehub } from './projects/ehub';
+
 export const fr = { 
   redirect: {
     title: 'Si votre navigateur ne vous redirige pas automatiquement,',
@@ -81,95 +90,14 @@ export const fr = {
     details: 'En savoir plus sur ce projet',
     technologies: 'Technologies',
     categories: 'Catégories',
-    'raid-team-generator': {
-      name: 'Raid Team Generator',
-      subtitle: 'Aide pour les raids sur Guild Wars 2.',
-      portfolio: 'Basé sur le jeu vidéo Guild Wars 2. Ce site aide les guilds à former leurs ' +
-        'équipes pour partir en raid.',
-      presentation: 'Site basé sur le jeu vidéo Guild Wars 2. Grâce à ce projet, les guildes ' +
-        '(équipes de joueurs) peuvent enregistrer leurs différents joueurs avec leurs ' +
-        'préférences pour chaque rôle disponible dans le jeu, et les compositions d\'équipes ' +
-        'qu\'ils utilisent pour compléter les raids du jeu. En seulement quelques clicks, il ' +
-        'est possible de choisir des joueurs et des compositions, et le site fait lui-même les ' +
-        'associations pour distribuer les différents rôles aux joueurs en fonction de leurs ' +
-        'préférences.'
-    },
-    ehub: {
-      name: 'E-Hub',
-      subtitle: 'Réseau social dédié au sport électronique.',
-      portfolio: 'Plateforme dédiée à la mise en relation des différents acteurs du sport ' +
-        'éléctronique.',
-      presentation: 'E-Hub est un réseau social dédié aux acteurs du sport électronique. Les ' +
-        'joueurs pourront s\'y retrouver dans l\'anonymat de leur pseudo, former des groupes, ' +
-        'organiser des évènements, trouver des camarades de jeu. Les structures, associations, ' +
-        'organismes, [...] gagneront en visibilité pour leurs tournois et disposeront d\'une ' +
-        'plateforme de recrutement dédiée à leurs services, pour des offres allant du bénévole ' +
-        'le temps d\'un évènement à l\'emploi longue durée dans leur entreprise. '
-    },
-    'personal-website': {
-      name: 'Site Personnel',
-      subtitle: 'Ce site même.',
-      portfolio: 'Ce site même. Son but est de montrer mes compétences en développement ' +
-        'et en musique.',
-      presentation: 'Ce site même. Son rôle est de montrer mes travaux et mes compétences en ' +
-        'développement et en musique. Les visiteurs peuvent laisser un message pour partager ' +
-        'leurs impressions et idées sur mes projets, ils peuvent aussi créer un compte pour ' +
-        'modifier et garder une trace de leurs commentaires. Le formulaire de contact vous ' +
-        'permet de facilement rentrer en contact avec moi. Visitez mon CV pour plus ' +
-        'd\'informations sur mes compétences et expériences professionnelles.'
-    },
-    'volume-manager': {
-      name: 'Volume Manager',
-      subtitle: 'Supervise le volume principal sur un ordinateur.',
-      portfolio: 'Le Volume Manager permet de superviser le volume d\'un ordinateur en ' +
-        'fonction de l\'heure de la journée.',
-      presentation: 'Ce projet a démarré de la problématique suivante : une résidence ' +
-        'étudiante trop proche du foyer du campus était gênée par le bruit de ce dernier ' +
-        'les soirs de cours, principallement parce que beaucoup partaient du foyer en ' +
-        'oubliant de couper la musique quand il ne restait personne. L\'objectif du Volume ' +
-        'Manager était de contrôller le volume de l\'ordinateur servant à diffuser la ' +
-        'musique, d\'une part pour le diminuer petit à petit sur certaines plages horraires, ' +
-        'd\'autre part pour couper complètement le son de l\'ordinateur la nuit pour permettre ' +
-        'aux résidents proche de dormir paisiblement.'
-    },
-    intellifridge: {
-      name: 'IntelliFridge',
-      subtitle: 'Gérez le contenu de votre frigidaire.',
-      portfolio: 'Contrôlez le contenu de votre frigidaire et de vos placards avec cette ' +
-        'application simple d\'utilisation.',
-      presentation: 'Une application Android qui vous aide à gérer le contenu de votre ' +
-        'frigidaire et de vos placards. En bref, vous pouvez remplir dans l\'application ' +
-        'ce que vous avez chez vous. Elle gère aussi les listes de courses et leur historique. ' +
-        'Vous pouvez ajouter ou retirer des objets de vos conteneurs pour garder la trace de ' +
-        'leur contenu. Plus tard, cette application pourrait travailler avec des apis pour ' +
-        'chercher des recettes utilisant les aliments qui approchent de leur date limite de ' +
-        'consommation.'
-    },
-    'dans-le-1000': {
-      name: 'Dans Le 1000',
-      subtitle: 'Concours de jeux mathématiques en ligne.',
-      portfolio: 'Support web du concours organisé par la rubrique du Monde "Affaire de Logique".',
-      presentation: '<a class="w3-text-theme" href="http://www.affairedelogique.com/" ' +
-        'title="Affaire de Logique" target="_blank">Affaire de Logique</a> est une rubrique ' +
-        'du journal <a class="w3-text-theme" href="http://www.lemonde.fr/" title="Le Monde">' +
-        'Le Monde</a>, proposant des jeux et énigmes mathématiques, qui paraît tous les ' +
-        'Mercredi. Pour fêter le 1000ème numéro de la rubrique, le concours "Dans le 1000" ' +
-        'est organisé, proposant aux lecteurs de répondre sur le site d\'Affaire de Logique ' +
-        'au jeu de la semaine en cours. Un nombre de points est attribué à chaque question ' +
-        'pour le calcul du score des joueurs.'
-    },
-    'iron-maiden-aces-high-cover': {
-      name: 'Iron Maiden - Aces High',
-      subtitle: 'Cover de Aces High par Iron Maiden.',
-      portfolio: 'Cover à la guitare de Aces High par Iron maiden.',
-      presentation: ''
-    },
-    'metallica-enter-sandman-cover': {
-      name: 'Metallica - Enter Sandman',
-      subtitle: 'Cover de Enter Sandman par Metallica.',
-      portfolio: 'Cover à la guitare de Enter Sandman par Metallica..',
-      presentation: ''
-    }
+    'raid-team-generator': RaidTeamGenerator,
+    'ehub': Ehub,
+    'personal-website': PersonalWebsite,
+    'volume-manager': VolumeManager,
+    'intellifridge': Intellifridge,
+    'dans-le-1000': DansLe1000,
+    'iron-maiden-aces-high-cover': IronMaidenAcesHighCover,
+    'metallica-enter-sandman-cover': MetallicaEnterSandmanCover
   },
   resume: {
     sections: {

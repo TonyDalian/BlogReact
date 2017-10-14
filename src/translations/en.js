@@ -1,10 +1,11 @@
-import { en as Ehub } from './projects/ehub';
-import { en as PersonalWebsite } from './projects/personal-website';
-import { en as DansLe1000 } from './projects/dans-le-1000';
-import { en as IronMaidenAcesHighCover } from './projects/iron-maiden-aces-high-cover';
 import { en as MetallicaEnterSandmanCover } from './projects/metallica-enter-sandman-cover';
-import { en as Intellifridge } from './projects/intellifridge';
+import { en as IronMaidenAcesHighCover } from './projects/iron-maiden-aces-high-cover';
+import { en as RaidTeamGenerator } from './projects/raid-team-generator';
+import { en as PersonalWebsite } from './projects/personal-website';
 import { en as VolumeManager } from './projects/volume-manager';
+import { en as Intellifridge } from './projects/intellifridge';
+import { en as DansLe1000 } from './projects/dans-le-1000';
+import { en as Ehub } from './projects/ehub';
 
 export const en = {	
 	redirect: {
@@ -88,26 +89,7 @@ export const en = {
 		details: 'Learn more about the project',
 		technologies: 'Technologies',
 		categories: 'Categories',
-		'raid-team-generator': {
-			name: 'Raid Team Generator',
-			subtitle: 'Helper for raids in Guild Wars 2.',
-			portfolio: 'Based on the video game Guild Wars 2. This project helps guilds building up ' +
-				'team compositions for raids.',
-			presentation: 'Website based on the video game Guild Wars 2. Thanks to this project, ' +
-				'guilds (a group of players) can register their players with their preferences ' +
-				'for the professions used by the guild, and their team compositions for the ' +
-				'raids in the game. With just a few clicks, users can pick players and ' +
-				'compositions, and the website associates the different professions to the selected ' +
-				'players depending on their preferences.',
-			section: {
-				insights: 'Get detailed insights about your players and compositions.',
-				builds: 'Freely set the builds you are using.',
-				players: 'Register your players and their preferences.',
-				compositions: 'Create compositions per raid boss.',
-				events: 'Add and manage events.',
-				teams: 'Easily generate your teams.'
-			}
-		},
+		'raid-team-generator': RaidTeamGenerator,
 		'ehub': Ehub,
 		'personal-website': PersonalWebsite,
 		'volume-manager': VolumeManager,

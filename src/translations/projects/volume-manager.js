@@ -11,3 +11,18 @@ export const en = {
 		'gradually diminishing the volume on certain time shifts, on the other hand by ' +
 		'muting the computer at night to ensure a peaceful night for nearby residents.'
 };
+
+export const fr = {
+	name: 'Volume Manager',
+	subtitle: 'Supervise le volume principal sur un ordinateur.',
+	portfolio: 'Le Volume Manager permet de superviser le volume d\'un ordinateur en ' +
+		'fonction de l\'heure de la journée.',
+	presentation: 'Ce projet a démarré de la problématique suivante : une résidence ' +
+		'étudiante trop proche du foyer du campus était gênée par le bruit de ce dernier ' +
+		'les soirs de cours, principallement parce que beaucoup partaient du foyer en ' +
+		'oubliant de couper la musique quand il ne restait personne. L\'objectif du Volume ' +
+		'Manager était de contrôller le volume de l\'ordinateur servant à diffuser la ' +
+		'musique, d\'une part pour le diminuer petit à petit sur certaines plages horraires, ' +
+		'd\'autre part pour couper complètement le son de l\'ordinateur la nuit pour permettre ' +
+		'aux résidents proche de dormir paisiblement.'
+};
