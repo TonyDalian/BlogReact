@@ -4,7 +4,8 @@ import { I18n, Translate } from 'react-redux-i18n';
 
 import { changeTitle } from '../../action';
 
-import ProjectPage from '../blocks/project/project_page';
+import DevProject from '../blocks/projects/dev-project';
+import MusicProject from '../blocks/projects/music-project';
 
 class Project extends React.Component {
 	componentWillUpdate() {
@@ -19,9 +20,11 @@ class Project extends React.Component {
 		if (project.length === 0)
 			this.props.history.push('/home');
 
-		return (
-			<ProjectPage project={project[0]} />
-		);
+		if(project[0].music) {
+			return (<MusicProject project={project[0]} />);
+		} else {
+			return (<DevProject project={project[0]} />);
+		}
 	} 
 }
 

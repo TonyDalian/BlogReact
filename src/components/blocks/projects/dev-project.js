@@ -1,14 +1,23 @@
 import { Translate } from 'react-redux-i18n';
+import { Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
 
-class ProjectHeader extends Component {
-	render() {
-		const project = this.props.project;
-		const slug = project.slug;
+import EHubPresentation from './presentation/ehub';
+import EHubContent from './content/ehub';
 
-		const content = this.props.project.music ?
-			(<iframe width="560" height="315" src={`https://www.youtube.com/embed/${project.github}`} frameborder="0" allowfullscreen></iframe>) :
-			(<p className="w3-margin-0 w3-layout-top"><Translate value={`project.${slug}.presentation`} dangerousHTML />}</p>);
+class DevProject extends Component {
+	render() {
+		let content, presentation;
+		const slug = this.props.project.slug;
+		
+		switch(slug) {
+			case 'ehub':
+				presentation = (<EHubPresentation />);
+				content = (<EHubContent />);
+				break;
+			default: 
+				return (<Redirect to="/home" />);
+		}
 
 		return (
 			<div className="w3-white w3-padding-xxlarge">
@@ -20,11 +29,11 @@ class ProjectHeader extends Component {
 					<div className="w3-container project-body w3-padding-xxlarge w3-panel w3-border w3-round-xxlarge w3-light-grey">
 						<div className="w3-layout-container w3-section">
 							<div className="w3-container w3-layout-cell text-justify w3-container">
-								{content}
+								{presentation}
 							</div>
 						</div>
 						
-						<img className="img-responsive center-block w3-section" src={`/bundles/pllcore/images/projects/${slug}.png`} />
+						{content}
 					</div>
 				</div>
 			</div>
@@ -32,4 +41,4 @@ class ProjectHeader extends Component {
 	}
 }
 
-export default ProjectHeader;
+export default DevProject;
