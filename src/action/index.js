@@ -72,7 +72,7 @@ export function changeTitle(title) {
 	};
 }
 
-export function loadProject(slug, locale, history) {
+export function loadProject(slug, locale) {
 	return dispatch => {
 		axios
 			.get(`${window.location.origin}/api/project/${slug}/${locale}`)

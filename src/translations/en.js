@@ -1,3 +1,11 @@
+import { en as Ehub } from './projects/ehub';
+import { en as PersonalWebsite } from './projects/personal-website';
+import { en as DansLe1000 } from './projects/dans-le-1000';
+import { en as IronMaidenAcesHighCover } from './projects/iron-maiden-aces-high-cover';
+import { en as MetallicaEnterSandmanCover } from './projects/metallica-enter-sandman-cover';
+import { en as Intellifridge } from './projects/intellifridge';
+import { en as VolumeManager } from './projects/volume-manager';
+
 export const en = {	
 	redirect: {
 		title: 'If your browser doesn\'t redirect you automatically,',
@@ -100,81 +108,13 @@ export const en = {
 				teams: 'Easily generate your teams.'
 			}
 		},
-		ehub: {
-			name: 'E-Hub',
-			subtitle: 'Social network dedicated to eSport.',
-			portfolio: 'Platform dedicated to bringing together the players and sponsors, gaming ' +
-			'houses, teams, associations...',
-			presentation: 'E-Hub is a social network dedicated to players and organizations ' +
-				'taking part in eSport. Players will be able to gather and interact hidden ' +
-				'behind their nickname\'s anonimity, create facebook-like groups and events, ' +
-				'or find new teammates to play with. Organizations, associations, and companies, ' +
-				'will gain visibility for their tournaments and will have a job platform dedicated ' +
-				'to videogames-related services, for offers ranging from volunteers the time of an ' +
-				'offline event to long-term employees.'
-		},
-		'personal-website': {
-			name: 'Personal Website',
-			subtitle: 'This very website.',
-			portfolio: 'This very website. Its purpose is to show off my work and skills both in ' +
-			'development and music.',
-			presentation: 'This very website. Its purpose is to show off my work and skills both ' +
-				'in development and music. Visitors can leave a message to share their thoughts ' +
-				'and ideas about my projects, they can also create an account to edit and keep ' +
-				'track of their comments. <a class="w3-text-theme" href="/contact" title="Me ' +
-				'contacter.">The contact form</a> gets you easily in touch with me. Please refer ' +
-				'to <a class="w3-text-theme" href="/resume" title="Go to my resume">my ' +
-				'resume</a> for further details about my skills and work experiences.'
-		},
-		'volume-manager': {
-			name: 'Volume Manager',
-			subtitle: 'Oversees the master volume on a computer.',
-			portfolio: 'The volume manager oversees the master volume on a computer depending ' +
-			'on the time.',
-			presentation: 'This project is based on the following problem : a student residence too ' +
-				'close to the campus\' bar was disturbed by the noise from the latter on school ' +
-				'nights, mainly because of many a student who left the bar forgetting to turn off ' +
-				'the music when there was nobody left. The purpose of the Volume Manager was to ' +
-				'oversee the volume of the computer used to broadcast the music, on one hand by ' +
-				'gradually diminishing the volume on certain time shifts, on the other hand by ' +
-				'muting the computer at night to ensure a peaceful night for nearby residents.'
-		},
-		intellifridge: {
-			name: 'IntelliFridge',
-			subtitle: 'Monitor your fridge content.',
-			portfolio: 'Monitor your fridge and household content with this easy-to-use application.',
-			presentation: 'An Android application that helps you manage your fridge and household ' +
-				'items. Basically, you can fill in the app what you have in your containers. It also ' +
-				'handles shopping lists and their historic. You can add and remove items from your ' +
-				'containers at any time to properly keep track. Later on, the application might work ' +
-				'with some API to search for recipes using the aliments which are approaching their ' +
-				'use-by date.'
-		},
-		'dans-le-1000': {
-			name: 'Dans Le 1000',
-			subtitle: 'Online Mathematical game contest.',
-			portfolio: 'Web support of the contest organized by the heading of ' +
-			'Le Monde\'s \'Affaire de Logique\'.',
-			presentation: '<a class="w3-text-theme" href="http://www.affairedelogique.com/" title="Affaire' +
-				' de Logique" target="_blank">Affaire de Logique</a> is a heading in the French ' +
-				'newspaper <a class="w3-text-theme" href="http://www.lemonde.fr/" title="Le Monde">Le ' +
-				'Monde</a>, consisting of mathematical games and enigmas, published once every wednesday.' +
-				' To celebrate the 1000th issue of the heading, the contest "Dans le 1000" is thrown, ' +
-				'letting readers answer the games on the Affaire de Logique website. Each question has ' +
-				'its own worth in points to calculate the players\' scores.'
-		},
-		'iron-maiden-aces-high-cover': {
-			name: 'Iron Maiden - Aces High',
-			subtitle: 'Cover of Aces High by Iron Maiden.',
-			portfolio: 'Guitar cover of Aces High by Iron maiden.',
-			presentation: ''
-		},
-		'metallica-enter-sandman-cover': {
-			name: 'Metallica - Enter Sandman',
-			subtitle: 'Cover of Enter Sandman by Metallica.',
-			portfolio: 'Guitar cover of Enter Sandman by Metallica.',
-			presentation: ''
-		}
+		'ehub': Ehub,
+		'personal-website': PersonalWebsite,
+		'volume-manager': VolumeManager,
+		'intellifridge': Intellifridge,
+		'dans-le-1000': DansLe1000,
+		'iron-maiden-aces-high-cover': IronMaidenAcesHighCover,
+		'metallica-enter-sandman-cover': MetallicaEnterSandmanCover
 	},
 	resume: {
 		sections: {

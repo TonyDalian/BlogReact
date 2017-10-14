@@ -6,9 +6,9 @@ import thunk from 'redux-thunk';
 import { translationsObject } from '../translations';
 import rootReducer from '../reducers';
 
-import { technologies } from '../../data/technologies'; 
-import { categories } from '../../data/categories';
-import { projects } from '../../data/projects';
+import { technologies } from '../data/technologies'; 
+import { categories } from '../data/categories';
+import { projects } from '../data/projects';
 
 import { getProjects, getCategories } from '../action';
 
