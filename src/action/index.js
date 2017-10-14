@@ -37,40 +37,31 @@ export function getTechnologies(technologies) {
 	}
 }
 
-export function getResume() {
+export function getResume(resume) {
 	return dispatch => {
-		axios
-			.get(`${window.location.origin}/api/resume`)
-			.then(response => dispatch({
-				type: FETCH_RESUME,
-				payload: response.data
-			}))
-		;
-	};
+		dispatch({
+			type: FETCH_RESUME,
+			payload: resume
+		})
+	}
 }
 
-export function getAcademics() {
+export function getAcademics(academics) {
 	return dispatch => {
-		axios
-			.get(`${window.location.origin}/api/academics`)
-			.then(response => dispatch({
-				type: FETCH_ACADEMICS,
-				payload: response.data
-			}))
-		;
-	};
+		dispatch({
+			type: FETCH_ACADEMICS,
+			payload: academics
+		})
+	}
 }
 
-export function getExperiences() {
+export function getExperiences(experiences) {
 	return dispatch => {
-		axios
-			.get(`${window.location.origin}/api/experiences`)
-			.then(response => dispatch({
-				type: FETCH_EXPERIENCES,
-				payload: response.data
-			}))
-		;
-	};
+		dispatch({
+			type: FETCH_EXPERIENCES,
+			payload: experiences
+		})
+	}
 }
 
 export function changeTitle(title) {

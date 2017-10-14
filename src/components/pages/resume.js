@@ -14,22 +14,9 @@ import ExperiencesList from '../blocks/resume/experiences/experiences_list';
 class Resume extends React.Component {
 	componentWillMount() {
 		this.props.changeTitle(I18n.t('titles.resume'));
-		if (_.isEmpty(this.props.resume)) this.props.getResume();
-		if (_.isEmpty(this.props.academics)) this.props.getAcademics();
-		if (_.isEmpty(this.props.experiences)) this.props.getExperiences();
 	}
 
 	render() {
-		if (_.isEmpty(this.props.resume) || 
-			_.isEmpty(this.props.experiences) || 
-			_.isEmpty(this.props.academics)) {
-			return (
-				<div style={{ minHeight: '60vh' }}>
-					<Loading />
-				</div>
-			);
-		}
-
 		const academics = (
 			<AcademicsList academics={this.props.academics} locale={this.props.locale} />
 		);
