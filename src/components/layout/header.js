@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { loadProject, clearProject } from '../../action'; 
-
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -15,12 +13,6 @@ class Header extends Component {
     changeLocale() {
         const target = this.props.locale === 'en' ? 'fr' : 'en';
         this.props.setLocale(target);
-
-        const slug = this.props.project.slug;
-        if (slug !== '') {
-            this.props.clearProject();
-            this.props.loadProject(slug, target);
-        }
     }
 
     render() {
@@ -61,9 +53,9 @@ class Header extends Component {
     }
 }
 
-function mapStateToProps({ i18n, project }) {
+function mapStateToProps({ i18n }) {
     const locale = i18n.locale;
-    return { locale, project };
+    return { locale };
 }
 
-export default connect(mapStateToProps, { loadProject, clearProject, setLocale })(Header);
+export default connect(mapStateToProps, { setLocale })(Header);
