@@ -4,6 +4,7 @@ import { FETCH_PROJECTS,
 	FETCH_RESUME, 
 	FETCH_ACADEMICS, 
 	FETCH_CATEGORIES, 
+	FETCH_TECHNOLOGIES,
 	FETCH_EXPERIENCES,
 	CHANGE_TITLE,
 	LOAD_PROJECT,
@@ -25,6 +26,15 @@ export function getCategories(categories) {
 			payload: categories
 		});
 	};
+}
+
+export function getTechnologies(technologies) {
+	return dispatch => {
+		dispatch({
+			type: FETCH_TECHNOLOGIES,
+			payload: technologies
+		})
+	}
 }
 
 export function getResume() {

@@ -1,46 +1,55 @@
-import { Translate } from 'react-redux-i18n';
+import { I18n, Translate } from 'react-redux-i18n';
 import { Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import _ from 'lodash';
 
-import EHubContent from './content/ehub';
-import DansLe1000Content from './content/dans-le-1000';
-import IntellifridgeContent from './content/intellifridge';
-import VolumeManagerContent from './content/volume-manager';
-import PersonalWebsiteContent from './content/personal-website';
+
 import RaidTeamGeneratorContent from './content/raid-team-generator';
+import PersonalWebsiteContent from './content/personal-website';
+import VolumeManagerContent from './content/volume-manager';
+import IntellifridgeContent from './content/intellifridge';
+import DansLe1000Content from './content/dans-le-1000';
+import EHubContent from './content/ehub';
 
 class DevProject extends Component {
+	renderCategoriesList(project) {
+		return _.join(
+			_.map(
+				_.filter(this.props.categories, category => {
+					return _.includes(project.categories, category.id);
+				}), 
+				category => I18n.t(`category.${category.slug}.title`)
+			),
+			', '
+		);
+	}
+
+	renderTechnologiesList(project) {
+		return _.join(
+			_.map( 
+				_.filter(this.props.technologies, technology => {
+					return _.includes(project.technologies, technology.id);
+				}),
+				technology => technology.label 
+			).sort(),
+			', '
+		);
+	}
+
 	render() {
 		let content;
-		const slug = this.props.project.slug;
+		const project = this.props.project;
+		const slug = project.slug;
+		
+		const categories = this.renderCategoriesList(project);
+		const technologies = this.renderTechnologiesList(project);
 
-		const github = this.props.project.github !== null ?
-			(<a href={this.props.project.github} target="_blank" className="w3-btn w3-grey w3-round w3-ripple w3-padding-medium w3-margin-bottom w3-text-white" role="button"><i className="fa fa-github w3-margin-right" aria-hidden="true" /><Translate value="project.github.long" /></a>) :
+		const github = project.github !== null ?
+			(<a href={project.github} target="_blank" className="w3-btn w3-grey w3-round w3-ripple w3-padding-medium w3-margin-bottom w3-text-white" role="button"><i className="fa fa-github w3-margin-right" aria-hidden="true" /><Translate value="project.github.long" /></a>) :
 			(<noscript />)
 		;
-		
-		switch(slug) {
-			case 'dans-le-1000':
-				content = (<DansLe1000Content />);
-				break;
-			case 'ehub':
-				content = (<EHubContent />);
-				break;
-			case 'intellifridge':
-				content = (<IntellifridgeContent />);
-				break;
-			case 'personal-website':
-				content = (<PersonalWebsiteContent />);
-				break;
-			case 'volume-manager':
-				content = (<VolumeManagerContent />);
-				break;
-			case 'raid-team-generator':
-				content = (<RaidTeamGeneratorContent />);
-				break;
-			default: 
-				return (<Redirect to="/home" />);
-		}
 
 		return (
 			<div className="w3-white w3-padding-xxlarge">
@@ -61,6 +70,9 @@ class DevProject extends Component {
 						{content}
 
 						{github}
+
+						<p className="w3-opacity">Categories : {categories}.</p>
+						<p className="w3-opacity">Technologies : {technologies}.</p>
 					</div>
 				</div>
 			</div>
@@ -68,4 +80,8 @@ class DevProject extends Component {
 	}
 }
 
-export default DevProject;
+function mapStateToProps({ categories, technologies }) {
+    return { categories, technologies };
+}
+
+export default connect(mapStateToProps)(DevProject);

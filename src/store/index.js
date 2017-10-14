@@ -10,7 +10,7 @@ import { technologies } from '../data/technologies';
 import { categories } from '../data/categories';
 import { projects } from '../data/projects';
 
-import { getProjects, getCategories } from '../action';
+import { getProjects, getCategories, getTechnologies } from '../action';
 
 export function configureStore(initialState) {
   const finalCreateStore = compose(
@@ -29,6 +29,7 @@ export function configureStore(initialState) {
   store.dispatch(loadTranslations(translationsObject));
   store.dispatch(setLocale('en'));
 
+  store.dispatch(getTechnologies(technologies));
   store.dispatch(getCategories(categories));
   store.dispatch(getProjects(projects));
 
