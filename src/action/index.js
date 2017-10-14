@@ -76,7 +76,7 @@ export function changeTitle(title) {
 export function formSend(data, callback) {
 	return dispatch => {
 		axios
-			.post('/api/contact', data)
+			.post('http://api.pierrelouislegrand.fr/contact', data)
 			.then(response => {
 				callback(response);
 			})
