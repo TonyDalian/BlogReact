@@ -157,20 +157,5 @@ export const projects = [
       169,
       173
     ]
-  },
-  {
-    id: 43,
-    slug: 'iron-maiden-aces-high-cover',
-    github: 'FNWOce03dmM',
-    music: true,
-    dev: false,
-    menu: false,
-    portfolio: false,
-    homepage: false,
-    categories: [
-      33,
-      35
-    ],
-    technologies: []
   }
 ];
