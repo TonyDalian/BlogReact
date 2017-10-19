@@ -4,8 +4,8 @@ import { I18n, Translate } from 'react-redux-i18n';
 
 import { changeTitle } from '../../action';
 
-import DevProject from '../blocks/projects/dev-project';
-import MusicProject from '../blocks/projects/music-project';
+import DevProject from '../blocks/project/dev-project';
+import MusicProject from '../blocks/project/music-project';
 
 class Project extends React.Component {
 	componentWillUpdate() {

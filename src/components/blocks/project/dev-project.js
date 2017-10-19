@@ -5,14 +5,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
-
-import RaidTeamGeneratorContent from './content/raid-team-generator';
-import PersonalWebsiteContent from './content/personal-website';
-import VolumeManagerContent from './content/volume-manager';
-import IntellifridgeContent from './content/intellifridge';
-import DansLe1000Content from './content/dans-le-1000';
-import EHubContent from './content/ehub';
-
 class DevProject extends Component {
 	renderCategoriesList(project) {
 		return _.join(
@@ -27,10 +19,10 @@ class DevProject extends Component {
 	}
 
 	render() {
-		let content;
 		const project = this.props.project;
 		const categories = this.renderCategoriesList(project);
 		const slug = project.slug;
+		const Content = project.content;
 
 		const github = project.github !== null ?
 			(<a href={project.github} target="_blank" className="w3-btn w3-grey w3-round w3-ripple w3-padding-medium w3-margin-bottom w3-text-white" role="button"><i className="fa fa-github w3-margin-right" aria-hidden="true" /><Translate value="project.github.long" /></a>) :
@@ -53,9 +45,7 @@ class DevProject extends Component {
 
 						<img className="img-responsive center-block w3-section" src={`/bundles/pllcore/images/projects/${slug}.png`}  />
 						
-						{content}
-
-						{github}
+						<Content />
 
 						<p className="w3-opacity">Categories : {categories}.</p>
 					</div>

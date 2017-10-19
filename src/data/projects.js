@@ -1,3 +1,10 @@
+import RaidTeamGeneratorContent from './content/raid-team-generator';
+import PersonalWebsiteContent from './content/personal-website';
+import VolumeManagerContent from './content/volume-manager';
+import IntellifridgeContent from './content/intellifridge';
+import DansLe1000Content from './content/dans-le-1000';
+import EHubContent from './content/ehub';
+
 export const projects = [
   {
     id: 37,
@@ -8,6 +15,7 @@ export const projects = [
     menu: true,
     portfolio: true,
     homepage: true,
+    content: RaidTeamGeneratorContent,
     categories: [
       34,
       35
@@ -22,6 +30,7 @@ export const projects = [
     menu: true,
     portfolio: true,
     homepage: true,
+    content: EHubContent,
     categories: [
       34,
       35
@@ -36,6 +45,7 @@ export const projects = [
     menu: true,
     portfolio: true,
     homepage: true,
+    content: PersonalWebsiteContent,
     categories: [
       34,
       35
@@ -50,6 +60,7 @@ export const projects = [
     menu: true,
     portfolio: true,
     homepage: true,
+    content: VolumeManagerContent,
     categories: [
       31,
       34,
@@ -65,6 +76,7 @@ export const projects = [
     menu: true,
     portfolio: true,
     homepage: true,
+    content: IntellifridgeContent,
     categories: [
       32,
       35
@@ -79,6 +91,7 @@ export const projects = [
     menu: true,
     portfolio: true,
     homepage: true,
+    content: DansLe1000Content,
     categories: [
       34,
       35
