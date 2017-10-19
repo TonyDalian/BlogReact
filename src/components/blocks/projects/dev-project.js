@@ -26,25 +26,11 @@ class DevProject extends Component {
 		);
 	}
 
-	renderTechnologiesList(project) {
-		return _.join(
-			_.map( 
-				_.filter(this.props.technologies, technology => {
-					return _.includes(project.technologies, technology.id);
-				}),
-				technology => technology.label 
-			).sort(),
-			', '
-		);
-	}
-
 	render() {
 		let content;
 		const project = this.props.project;
-		const slug = project.slug;
-		
 		const categories = this.renderCategoriesList(project);
-		const technologies = this.renderTechnologiesList(project);
+		const slug = project.slug;
 
 		const github = project.github !== null ?
 			(<a href={project.github} target="_blank" className="w3-btn w3-grey w3-round w3-ripple w3-padding-medium w3-margin-bottom w3-text-white" role="button"><i className="fa fa-github w3-margin-right" aria-hidden="true" /><Translate value="project.github.long" /></a>) :
@@ -72,7 +58,6 @@ class DevProject extends Component {
 						{github}
 
 						<p className="w3-opacity">Categories : {categories}.</p>
-						<p className="w3-opacity">Technologies : {technologies}.</p>
 					</div>
 				</div>
 			</div>

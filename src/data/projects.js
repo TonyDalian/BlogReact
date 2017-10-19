@@ -11,22 +11,6 @@ export const projects = [
     categories: [
       34,
       35
-    ],
-    technologies: [
-      164,
-      166,
-      169,
-      170,
-      171,
-      172,
-      173,
-      174,
-      175,
-      176,
-      177,
-      178,
-      179,
-      180
     ]
   },
   {
@@ -41,23 +25,6 @@ export const projects = [
     categories: [
       34,
       35
-    ],
-    technologies: [
-      164,
-      165,
-      166,
-      169,
-      170,
-      171,
-      172,
-      173,
-      174,
-      175,
-      176,
-      177,
-      178,
-      179,
-      180
     ]
   },
   {
@@ -72,23 +39,6 @@ export const projects = [
     categories: [
       34,
       35
-    ],
-    technologies: [
-      164,
-      166,
-      169,
-      170,
-      171,
-      172,
-      173,
-      174,
-      175,
-      176,
-      177,
-      178,
-      179,
-      180,
-      186
     ]
   },
   {
@@ -104,20 +54,6 @@ export const projects = [
       31,
       34,
       35
-    ],
-    technologies: [
-      164,
-      166,
-      169,
-      173,
-      175,
-      176,
-      177,
-      178,
-      180,
-      183,
-      184,
-      185
     ]
   },
   {
@@ -132,11 +68,6 @@ export const projects = [
     categories: [
       32,
       35
-    ],
-    technologies: [
-      166,
-      167,
-      168
     ]
   },
   {
@@ -151,11 +82,6 @@ export const projects = [
     categories: [
       34,
       35
-    ],
-    technologies: [
-      166,
-      169,
-      173
     ]
   }
 ];

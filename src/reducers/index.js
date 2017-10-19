@@ -9,10 +9,8 @@ import ReducerProjects from './reducer_projects';
 import ReducerAcademics from './reducer_academics';
 import ReducerCategories from './reducer_categories';
 import ReducerExperiences from './reducer_experiences';
-import ReducerTechnologies from './reducer_technologies';
 
 const rootReducer = combineReducers({
-	technologies: ReducerTechnologies,
 	experiences: ReducerExperiences,
 	categories: ReducerCategories,
 	academics: ReducerAcademics,
