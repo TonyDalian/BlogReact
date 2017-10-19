@@ -65,8 +65,8 @@ class DevProject extends Component {
 	}
 }
 
-function mapStateToProps({ categories, technologies }) {
-    return { categories, technologies };
+function mapStateToProps({ categories }) {
+    return { categories };
 }
 
 export default connect(mapStateToProps)(DevProject);
